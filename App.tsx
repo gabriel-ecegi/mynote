@@ -7,6 +7,7 @@ import {
   FontAwesome5,
   FontAwesome,
 } from "@expo/vector-icons";
+import { WebView } from "react-native-webview";
 
 function DashboardScreen() {
   return (
@@ -18,9 +19,10 @@ function DashboardScreen() {
 
 function TasksScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Tasks!</Text>
-    </View>
+    <WebView
+      source={{ uri: "https://gabriel-ecegi.github.io/ukolovnik/" }}
+      style={{ flex: 1 }}
+    />
   );
 }
 
@@ -67,8 +69,6 @@ export default function App() {
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            console.log(route.name, focused, color, size);
-
             const { lib: IconComponent, name } =
               ICONS[route.name as keyof typeof ICONS];
             const iconName = focused ? `${name}` : `${name}`;
