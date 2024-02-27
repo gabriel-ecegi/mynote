@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f3a00311-0dbd-4684-b981-2cb9724fb279"
+      }
+    },
+    "owner": "gabriel.ecegi"
   }
 }
